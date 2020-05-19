@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2oP-oV-JoC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pinterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carregando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se4-Zh-9kk">
+                                <rect key="frame" x="126" y="483" width="162" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="AtO-Lu-nhE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xNU-SB-tsh">
+                                <rect key="frame" x="172" y="538" width="70" height="61"/>
+                                <color key="color" red="0.82745098039999998" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-EZ-MCp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="SUE-g0-Ce2">
+                                    <size key="itemSize" width="288" height="302"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="PMb-UV-xK3">
+                                        <rect key="frame" x="63" y="0.0" width="288" height="302"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ODF-HR-w6U">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="302"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lindaFoto" translatesAutoresizingMaskIntoConstraints="NO" id="l3i-zl-cfP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="302"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="302" id="9nw-q4-kUC"/>
+                                                        <constraint firstAttribute="width" constant="288" id="DiR-RF-4mV"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l3i-zl-cfP" firstAttribute="top" secondItem="ODF-HR-w6U" secondAttribute="top" id="0Ii-yg-8WE"/>
+                                                <constraint firstItem="l3i-zl-cfP" firstAttribute="leading" secondItem="ODF-HR-w6U" secondAttribute="leading" id="K3X-1Z-UOZ"/>
+                                                <constraint firstItem="l3i-zl-cfP" firstAttribute="top" secondItem="ODF-HR-w6U" secondAttribute="top" id="T43-jw-mFX"/>
+                                                <constraint firstAttribute="trailing" secondItem="l3i-zl-cfP" secondAttribute="trailing" id="Yge-cK-kod"/>
+                                                <constraint firstAttribute="bottom" secondItem="l3i-zl-cfP" secondAttribute="bottom" id="d1c-RD-aDc"/>
+                                                <constraint firstItem="l3i-zl-cfP" firstAttribute="leading" secondItem="ODF-HR-w6U" secondAttribute="leading" id="qeb-Xw-7NE"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="288" height="302"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Vbu-c5-EoV"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ROY-EZ-MCp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="379-2C-Aig"/>
+                            <constraint firstItem="ROY-EZ-MCp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBe-b4-Nmp"/>
+                            <constraint firstItem="ROY-EZ-MCp" firstAttribute="centerX" secondItem="se4-Zh-9kk" secondAttribute="centerX" id="Lxe-Sc-qaO"/>
+                            <constraint firstItem="se4-Zh-9kk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="343" id="cdU-CV-JZA"/>
+                            <constraint firstItem="ROY-EZ-MCp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eLd-Yo-7Pf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xNU-SB-tsh" secondAttribute="bottom" constant="263" id="jMi-mR-Ala"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ROY-EZ-MCp" secondAttribute="bottom" constant="-34" id="pUw-Gs-qjw"/>
+                            <constraint firstItem="xNU-SB-tsh" firstAttribute="top" secondItem="se4-Zh-9kk" secondAttribute="bottom" constant="20" id="rP3-Ic-lgc"/>
+                            <constraint firstItem="se4-Zh-9kk" firstAttribute="centerX" secondItem="xNU-SB-tsh" secondAttribute="centerX" id="sjY-wj-c6J"/>
+                            <constraint firstItem="xNU-SB-tsh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="sji-D6-BwT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feed" id="xRv-9p-hEE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ROY-EZ-MCp" id="ZzX-lu-4zx"/>
+                        <outlet property="indicadorDaAtividade" destination="xNU-SB-tsh" id="L4v-oC-AzP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dI9-Mx-RrS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2oP-oV-JoC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6Ft-tQ-360">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.82745098039999998" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jS7-LE-Sld"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKj-T7-Act" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lindaFoto" width="3529" height="5293"/>
+    </resources>
+</document>
